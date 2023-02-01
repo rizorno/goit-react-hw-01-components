@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import css from './profile.module.scss';
 
 function Profile({ username, tag, location, avatar, stats }) {
+  const { followers, views, likes } = stats;
+
   return (
     <div className={css.profile}>
       <div className={css.description}>
@@ -15,15 +17,15 @@ function Profile({ username, tag, location, avatar, stats }) {
       <ul className={css.stats}>
         <li>
           <span className={css.label}>Followers</span>
-          <span className={css.quantity}>{stats.followers}</span>
+          <span className={css.quantity}>{followers}</span>
         </li>
         <li>
           <span className={css.label}>Views</span>
-          <span className={css.quantity}>{stats.views}</span>
+          <span className={css.quantity}>{views}</span>
         </li>
         <li>
           <span className={css.label}>Likes</span>
-          <span className={css.quantity}>{stats.likes}</span>
+          <span className={css.quantity}>{likes}</span>
         </li>
       </ul>
     </div>
