@@ -29,8 +29,6 @@
   .avatar {
     width: 150px;
 
-    display: block;
-
     margin: 20px auto;
 
     border-radius: 50%;
@@ -73,9 +71,10 @@
     0 3px 1px -2px rgb(0 0 0 / 20%);
 
   > li {
+    width: 100px;
+
     display: flex;
     flex-direction: column;
-    width: 100px;
   }
 
   > li:not(:last-child) {
@@ -84,11 +83,13 @@
 
   .label {
     color: rgba(46, 48, 48, 0.82);
+
     margin: 15px 0 10px;
   }
 
   .quantity {
-    margin-bottom: 15px;
     font-weight: 700;
+
+    margin-bottom: 15px;
   }
 }

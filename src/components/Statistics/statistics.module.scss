@@ -29,13 +29,16 @@
 .stat-list {
   display: flex;
   justify-content: center;
+
   box-shadow: 0 3px 3px 0 rgb(0 0 0 / 14%), 0 1px 7px 0 rgb(0 0 0 / 12%),
     0 3px 1px -2px rgb(0 0 0 / 20%);
+
   margin: 0 auto;
 }
 
 .item {
   width: 70px;
+
   display: flex;
   flex-direction: column;
 
@@ -71,8 +74,9 @@
 }
 
 .label {
-  margin-bottom: 10px;
   font-size: 14px;
+
+  margin-bottom: 10px;
 }
 
 .percentage {
