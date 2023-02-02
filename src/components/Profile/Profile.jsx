@@ -5,6 +5,23 @@ import css from './profile.module.scss';
 function Profile({ username, tag, location, avatar, stats }) {
   const { followers, views, likes } = stats;
 
+  //? Round and Separation of thousandths
+
+  function separation(data) {
+    data = Math.round(data);
+    let xP = String(data);
+    let sP = xP.split('');
+    let indexP = xP.length - 1;
+    let wP = Math.floor(indexP / 3);
+    for (let i = 1; i <= wP; i += 1) {
+      indexP = indexP - 1 - i;
+      sP.splice(indexP, 0, ' ');
+      let rP = sP.join('');
+      data = rP;
+    }
+    return data;
+  }
+
   return (
     <div className={css.profile}>
       <div className={css.description}>
@@ -30,23 +47,6 @@ function Profile({ username, tag, location, avatar, stats }) {
       </ul>
     </div>
   );
-}
-
-//? Round and Separation of thousandths
-
-function separation(data) {
-  data = Math.round(data);
-  let xP = String(data);
-  let sP = xP.split('');
-  let indexP = xP.length - 1;
-  let wP = Math.floor(indexP / 3);
-  for (let i = 1; i <= wP; i += 1) {
-    indexP = indexP - 1 - i;
-    sP.splice(indexP, 0, ' ');
-    let rP = sP.join('');
-    data = rP;
-  }
-  return data;
 }
 
 Profile.propTypes = {
