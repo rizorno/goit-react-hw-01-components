@@ -14,6 +14,7 @@ function TransactionHistory({ items = [] }) {
       </tr>
     );
   });
+
   return (
     <table className={css['transaction-history']}>
       <thead>

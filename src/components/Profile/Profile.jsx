@@ -2,9 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import css from './profile.module.scss';
 
-function Profile({ username, tag, location, avatar, stats }) {
-  const { followers, views, likes } = stats;
-
+function Profile({
+  username,
+  tag,
+  location,
+  avatar,
+  stats: { followers, views, likes },
+}) {
   //? Round and Separation of thousandths
 
   function separation(data) {

@@ -7,6 +7,7 @@ function Statistics({ title = '', stats = [] }) {
 
   let elements = stats.map(element => {
     const { id, label, percentage } = element;
+
     return (
       <li key={id} className={css.item}>
         <span className={css.label}>{label}</span>
