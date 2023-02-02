@@ -32,7 +32,7 @@ function Profile({ username, tag, location, avatar, stats }) {
   );
 }
 
-//? Separation of thousandths
+//? Round and Separation of thousandths
 
 function separation(data) {
   data = Math.round(data);
